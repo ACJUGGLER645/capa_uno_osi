@@ -1,0 +1,45 @@
+DOCUMENTACIÓN MAESTRA: EL VIAJE DEL BIT (CAPA 1 OSI)
+===================================================
+
+1. EL ORIGEN: ¿QUÉ ES LA CAPA 1? (DEFINICIÓN)
+La Capa Física es el puerto de salida de toda comunicación. Es la encargada de traducir los datos lógicos de la computadora a señales físicas que el mundo real pueda entender.
+- Función: Transportar flujos de BITS (0 y 1).
+- La Transformación: Convierte datos digitales en pulsos eléctricos (Cobre), destellos de luz (Fibra) u ondas de radio (WiFi).
+- Analogía: Si internet fuera una ciudad, la Capa 1 es el asfalto de las carreteras.
+
+2. LOS VEHÍCULOS: TIPOS DE CABLES Y SEÑALES
+Para que la señal se transporte, necesita un medio físico de calidad:
+- Par Trenzado (Cobre): El estándar RJ45. Sus hilos se trenzan para cancelar el ruido eléctrico por inducción (Crosstalk). Categorías: Cat 6 (1Gbps), Cat 6a (10Gbps/500MHz) y Cat 8 (40Gbps para distancias cortas).
+- Fibra Óptica: Hilos de vidrio que usan la "Reflexión Interna Total". La luz rebota dentro del núcleo como en un túnel de espejos.
+  * Monomodo (OS2): Núcleo fino (9µm), para distancias de kilómetros (ciudades).
+  * Multimodo (OM4): Núcleo grueso (50µm), para distancias cortas (edificios).
+- Cable Coaxial: Robusto y blindado, usado principalmente para traer internet desde la calle al hogar (HFC).
+
+3. LAS ESTACIONES: HARDWARE Y RECURSOS FÍSICOS
+El cable no funciona solo; requiere dispositivos que mantengan el flujo de bits:
+- NIC (Tarjeta de Red): Es la interfaz física. Traduce los datos de la PC al cable.
+- Repetidores: Dado que la señal se "cansa" (atenúa), el repetidor la recibe débil y la relanza con fuerza original.
+- Transceivers (Módulos SFP): Adaptadores que permiten que un equipo eléctrico "hable" luz para conectarse a una fibra óptica.
+- Hubs: Dispositivos antiguos que repiten la señal a todos los puertos sin filtro (dominio de colisión único).
+
+4. EL DILEMA DEL CAMINO: WIFI VS. CONEXIÓN CABLEADA
+Una vez tenemos el hardware, elegimos cómo transmitir:
+- Conexión Cableada: Es una "autopista privada". Es Full-Duplex (puedes enviar y recibir datos simultáneamente sin chocar). Ofrece máxima estabilidad y baja latencia.
+- Conexión WiFi (Inalámbrica): Es una "plaza pública". Es un medio compartido y Half-Duplex (los dispositivos deben esperar su turno para hablar). La señal es sensible a interferencias externas.
+
+5. RENDIMIENTO: VELOCIDAD Y ANCHO DE BANDA
+- Ancho de Banda: Es la capacidad teórica del camino (cuántos carriles tiene la autopista). Se mide en Mbps o Gbps.
+- Velocidad: Es el flujo real de datos en un momento dado.
+- Tecnologías Pro: PAM4 (modulación para enviar más bits por pulso eléctrico) y WDM (enviar múltiples colores de luz por una misma fibra).
+
+6. LOS OBSTÁCULOS: DISTANCIAS E INTERFERENCIAS
+Incluso la mejor tecnología tiene límites físicos:
+- Distancia (Atenuación): En cables de cobre, el límite máximo es 100 metros. Más allá, la señal se debilita tanto que el receptor no la entiende.
+- Interferencia (EMI): Ruido causado por motores, cables de luz o imanes que "borran" los bits en cables de cobre.
+- Obstáculos WiFi: El concreto, los espejos y el agua absorben las microondas de radio, reduciendo el alcance.
+
+7. FINAL DEL CAMINO: ERRORES COMUNES EN CAPA 1
+- Cable Roto o Doblado: En fibra, un doblez excesivo (macro-bending) hace que la luz se escape del núcleo.
+- Falta de Luz/Energía: Un puerto sucio o un SFP dañado impide que la señal llegue.
+- Crimpado Defectuoso: Hilos del conector RJ45 mal posicionados causan conexiones intermitentes o nulas.
+- Desajuste de Velocidad: Cuando un lado intenta hablar a 1000Mbps y el otro solo soporta 100Mbps.

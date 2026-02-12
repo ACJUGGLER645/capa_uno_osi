@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Viaje del Bit: OSI Capa 1</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Lexend:wght@300;500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="background-glow"></div>
+
+    <!-- Navegación Fija (7 Etapas) -->
+    <nav class="glass-nav">
+        <div class="nav-container">
+            <span class="nav-logo">OSI<span class="active-dot">.</span>PHY</span>
+            <ul class="nav-links">
+                <li><a href="#origen" class="active">1. Origen</a></li>
+                <li><a href="#vehiculos">2. Vehículos</a></li>
+                <li><a href="#estaciones">3. Estaciones</a></li>
+                <li><a href="#dilema">4. Dilema</a></li>
+                <li><a href="#rendimiento">5. Rendimiento</a></li>
+                <li><a href="#obstaculos">6. Obstáculos</a></li>
+                <li><a href="#errores">7. Errores</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-toggle-nav" aria-label="Cambiar Tema">
+                <span class="icon">☀️</span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- 1. EL ORIGEN: ¿QUÉ ES LA CAPA 1? -->
+        <section id="origen" class="full-screen-section flex-center">
+            <div class="content-wrapper text-center">
+                <span class="badge">ETAPA 1: DEFINICIÓN</span>
+                <h1 class="hero-title">EL ORIGEN: <span class="gradient-text">PUERTO DE SALIDA</span></h1>
+                <p class="hero-subtitle">
+                    La Capa Física es el encargado de traducir el mundo lógico al mundo real.
+                    Convierte datos digitales de tu PC a pulsos eléctricos, luz o radio.
+                </p>
+                <div class="glass-card analogy-card inline-card">
+                    <span class="icon-medium">🛣️</span>
+                    <p><strong>Analogía:</strong> Si internet fuera una ciudad, la Capa 1 es el asfalto de las
+                        carreteras.</p>
+                </div>
+            </div>
+            <div class="scroll-indicator">↓ Siguiente Etapa</div>
+        </section>
+
+        <!-- 2. LOS VEHÍCULOS: TIPOS DE CABLES -->
+        <section id="vehiculos" class="full-screen-section">
+            <div class="container">
+                <h2 class="section-title">Etapa 2: Los Vehículos (Medios)</h2>
+                <div class="grid-3-col">
+
+                    <article class="glass-card feature-card">
+                        <div class="card-icon">⚡</div>
+                        <h3>Par Trenzado (Cobre)</h3>
+                        <p class="tech-desc">Estándar RJ45. Hilos trenzados para cancelar ruido (Crosstalk).</p>
+                        <ul class="tech-list">
+                            <li><strong>Cat 6:</strong> 1 Gbps.</li>
+                            <li><strong>Cat 6a/8:</strong> 10-40 Gbps.</li>
+                        </ul>
+                    </article>
+
+                    <article class="glass-card feature-card accent-border">
+                        <div class="card-icon">🔦</div>
+                        <h3>Fibra Óptica</h3>
+                        <p class="tech-desc">Hilos de vidrio. Usa "Reflexión Interna Total" (túnel de espejos).</p>
+                        <ul class="tech-list">
+                            <li><strong>Monomodo:</strong> KM de distancia (Núcleo fino).</li>
+                            <li><strong>Multimodo:</strong> Edificios (Núcleo grueso).</li>
+                        </ul>
+                    </article>
+
+                    <article class="glass-card feature-card">
+                        <div class="card-icon">📡</div>
+                        <h3>Coaxial (HFC)</h3>
+                        <p class="tech-desc">Robusto y blindado. Usado para traer internet desde la calle a tu casa.</p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. LAS ESTACIONES: HARDWARE -->
+        <section id="estaciones" class="full-screen-section">
+            <div class="container">
+                <h2 class="section-title">Etapa 3: Las Estaciones (Hardware)</h2>
+                <div class="hardware-grid">
+                    <div class="glass-panel hardware-item">
+                        <h4>NIC (Tarjeta de Red)</h4>
+                        <p>La interfaz física. Traduce los datos de la PC al cable.</p>
+                    </div>
+                    <div class="glass-panel hardware-item">
+                        <h4>Repetidores</h4>
+                        <p>Reciben una señal "cansada" (atenuada) y la relanzan con fuerza original.</p>
+                    </div>
+                    <div class="glass-panel hardware-item highlight-item">
+                        <h4>Transceivers (SFP)</h4>
+                        <p>Adaptadores políglotas: permiten que un switch eléctrico "hable" luz.</p>
+                    </div>
+                    <div class="glass-panel hardware-item opacity-dim">
+                        <h4>Hubs (Obsoletos)</h4>
+                        <p>Repiten señal a lo tonto (sin filtro). Causan colisiones.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. EL DILEMA DEL CAMINO: WIFI VS CABLE -->
+        <section id="dilema" class="full-screen-section">
+            <div class="container">
+                <h2 class="section-title">Etapa 4: El Dilema del Camino</h2>
+                <div class="wide-card glass-panel flex-row-card">
+
+                    <div class="split-side left-side">
+                        <h3>🔌 Cableada (Privada)</h3>
+                        <p class="analogy-text">"Una Autopista Privada"</p>
+                        <ul class="tech-list">
+                            <li><strong>Full-Duplex:</strong> Enviar y recibir a la vez.</li>
+                            <li><strong>Ventaja:</strong> Máxima estabilidad y seguridad.</li>
+                        </ul>
+                    </div>
+
+                    <div class="vs-badge">VS</div>
+
+                    <div class="split-side right-side">
+                        <h3>📶 WiFi (Pública)</h3>
+                        <p class="analogy-text">"Una Plaza Pública"</p>
+                        <ul class="tech-list">
+                            <li><strong>Half-Duplex:</strong> Esperar turno para hablar.</li>
+                            <li><strong>Desventaja:</strong> Interferencias y latencia.</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. RENDIMIENTO -->
+        <section id="rendimiento" class="full-screen-section">
+            <div class="container">
+                <h2 class="section-title">Etapa 5: Rendimiento & Velocidad</h2>
+
+                <div class="metrics-grid">
+                    <div class="metric-card glass-card">
+                        <h4>Ancho de Banda</h4>
+                        <p>Capacidad teórica del camino (Número de carriles de la autopista).</p>
+                    </div>
+                    <div class="metric-card glass-card">
+                        <h4>Velocidad Real</h4>
+                        <p>El flujo real de datos (autos) en un momento dado.</p>
+                    </div>
+                </div>
+
+                <div class="advanced-tech-box glass-panel mt-2">
+                    <h3>Tecnologías Pro (Para Expertos)</h3>
+                    <div class="tech-duo">
+                        <div class="tech-unit">
+                            <h4>PAM4 (Modulación)</h4>
+                            <p>Enviar mas bits por cada pulso eléctrico. Más densidad.</p>
+                        </div>
+                        <div class="tech-unit">
+                            <h4>WDM (Multiplexación)</h4>
+                            <p>Enviar múltiples colores de luz por una misma fibra. Multiplica la capacidad.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. LOS OBSTÁCULOS -->
+        <section id="obstaculos" class="full-screen-section">
+            <div class="container">
+                <h2 class="section-title">Etapa 6: Los Obstáculos Físicos</h2>
+                <div class="pathology-grid">
+                    <div class="path-item warning">
+                        <span class="icon-small">📏</span>
+                        <strong>Distancia (Atenuación):</strong>
+                        <span>Límite de 100m en cobre. Más allá, la señal es un susurro.</span>
+                    </div>
+                    <div class="path-item warning">
+                        <span class="icon-small">⚡</span>
+                        <strong>Interferencia (EMI):</strong>
+                        <span>Motores o imanes que "borran" los bits en el cobre.</span>
+                    </div>
+                    <div class="path-item warning">
+                        <span class="icon-small">🧱</span>
+                        <strong>Obstáculos WiFi:</strong>
+                        <span>Concreto, espejos y agua absorben las ondas de radio.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. FINAL DEL CAMINO: ERRORES -->
+        <section id="errores" class="full-screen-section">
+            <div class="container">
+                <h2 class="section-title">Etapa 7: Errores Comunes</h2>
+
+                <div class="terminal-container">
+                    <div class="terminal-header">
+                        <span class="term-title">Diagnóstico de Fallos Físicos</span>
+                    </div>
+                    <div class="terminal-body">
+                        <p class="cmd">> Check Status...</p>
+                        <p>> ERROR: <span class="error-text">Macro-bending Detected</span></p>
+                        <p class="comment">// CAUSA: Fibra óptica doblada excesivamente. La luz se escapa en la curva.
+                        </p>
+                        <br>
+                        <p class="cmd">> Check RJ45...</p>
+                        <p>> WARN: <span class="error-text">Intermittent Signal</span></p>
+                        <p class="comment">// CAUSA: Crimpado defectuoso. Los pines no tocan bien el cobre.</p>
+                        <br>
+                        <p>> ERROR: <span class="error-text">Speed Mismatch (Duplex)</span></p>
+                        <p class="comment">// CAUSA: Un lado a 1000Mbps, el otro a 100Mbps.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="glass-footer">
+        <p>Documentación Maestra del Viaje del Bit • Proyecto OSI Capa 1</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

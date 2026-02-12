@@ -44,13 +44,17 @@
                 <span class="badge">ETAPA 1: DEFINICIÓN</span>
                 <h1 class="hero-title">EL ORIGEN: <span class="gradient-text">PUERTO DE SALIDA</span></h1>
                 <p class="hero-subtitle">
-                    La Capa Física es el encargado de traducir el mundo lógico al mundo real.
-                    Convierte datos digitales de tu PC a pulsos eléctricos, luz o radio.
+                    Aquí ocurre la magia de la traducción. La computadora procesa información en ceros y unos (Lógica),
+                    pero el
+                    mundo real funciona con Física.
+                    <br><br>
+                    La Capa 1 toma ese bit lógico y lo convierte en algo tangible: una descarga eléctrica en un metal,
+                    un destello láser en un vidrio, o una onda invisible en el aire.
                 </p>
                 <div class="glass-card analogy-card inline-card">
                     <span class="icon-medium">🛣️</span>
                     <p><strong>Analogía:</strong> Si internet fuera una ciudad, la Capa 1 es el asfalto de las
-                        carreteras.</p>
+                        carreteras y los camiones de carga.</p>
                 </div>
             </div>
             <div class="scroll-indicator">↓ Siguiente Etapa</div>
@@ -65,27 +69,39 @@
                     <article class="glass-card feature-card">
                         <div class="card-icon">⚡</div>
                         <h3>Par Trenzado (Cobre)</h3>
-                        <p class="tech-desc">Estándar RJ45. Hilos trenzados para cancelar ruido (Crosstalk).</p>
+                        <p class="tech-desc">
+                            Usamos cobre porque es un excelente conductor. ¿Por qué <strong>trenzado</strong>?
+                            Al enrollar los cables entre sí, logramos cancelar los campos magnéticos externos
+                            (ruido/interferencia).
+                            Sin trenzado, los datos llegarían corruptos por el simple ruido eléctrico de la pared.
+                        </p>
                         <ul class="tech-list">
-                            <li><strong>Cat 6:</strong> 1 Gbps.</li>
-                            <li><strong>Cat 6a/8:</strong> 10-40 Gbps.</li>
+                            <li><strong>Cat 6:</strong> Hasta 1 Gbps (Estándar de hogar).</li>
+                            <li><strong>Cat 6a/8:</strong> Hasta 40 Gbps (Data Centers).</li>
                         </ul>
                     </article>
 
                     <article class="glass-card feature-card accent-border">
                         <div class="card-icon">🔦</div>
                         <h3>Fibra Óptica</h3>
-                        <p class="tech-desc">Hilos de vidrio. Usa "Reflexión Interna Total" (túnel de espejos).</p>
+                        <p class="tech-desc">
+                            Hilos de vidrio más finos que un cabello. La luz viaja rebotando("Reflexión Interna Total").
+                            Es inmune a la electricidad, rayos y magnetismo. Perfecta para unir continentes bajo el mar.
+                        </p>
                         <ul class="tech-list">
-                            <li><strong>Monomodo:</strong> KM de distancia (Núcleo fino).</li>
-                            <li><strong>Multimodo:</strong> Edificios (Núcleo grueso).</li>
+                            <li><strong>Monomodo:</strong> Núcleo diminuto (9µm). Luz láser recta para KMs.</li>
+                            <li><strong>Multimodo:</strong> Núcleo ancho. Luz LED rebotando para edificios.</li>
                         </ul>
                     </article>
 
                     <article class="glass-card feature-card">
                         <div class="card-icon">📡</div>
                         <h3>Coaxial (HFC)</h3>
-                        <p class="tech-desc">Robusto y blindado. Usado para traer internet desde la calle a tu casa.</p>
+                        <p class="tech-desc">
+                            Un núcleo grueso de cobre blindado por mallas metálicas.
+                            Es menos flexible pero muy resistente. Es el cable negro que suele traer Internet desde el
+                            poste de la calle hasta el módem.
+                        </p>
                     </article>
 
                 </div>
@@ -99,19 +115,24 @@
                 <div class="hardware-grid">
                     <div class="glass-panel hardware-item">
                         <h4>NIC (Tarjeta de Red)</h4>
-                        <p>La interfaz física. Traduce los datos de la PC al cable.</p>
+                        <p>Es el traductor oficial. Vive dentro del equipo y es el punto exacto donde los datos
+                            digitales
+                            se vuelven señales eléctricas.</p>
                     </div>
                     <div class="glass-panel hardware-item">
                         <h4>Repetidores</h4>
-                        <p>Reciben una señal "cansada" (atenuada) y la relanzan con fuerza original.</p>
+                        <p>La señal se cansa con la distancia (atenuación). Un repetidor escucha un susurro débil y lo
+                            grita de nuevo con fuerza original.</p>
                     </div>
                     <div class="glass-panel hardware-item highlight-item">
                         <h4>Transceivers (SFP)</h4>
-                        <p>Adaptadores políglotas: permiten que un switch eléctrico "hable" luz.</p>
+                        <p>Módulos intercambiables. Permiten que un switch "hable" diferentes idiomas físicos: puedes
+                            conectar un módulo de fibra o uno de cobre en el mismo puerto.</p>
                     </div>
                     <div class="glass-panel hardware-item opacity-dim">
                         <h4>Hubs (Obsoletos)</h4>
-                        <p>Repiten señal a lo tonto (sin filtro). Causan colisiones.</p>
+                        <p>Eran repetidores "tontos". Si entraba un dato, lo repetían a TODOS los puertos, causando caos
+                            y choques de información.</p>
                     </div>
                 </div>
             </div>
@@ -126,9 +147,13 @@
                     <div class="split-side left-side">
                         <h3>🔌 Cableada (Privada)</h3>
                         <p class="analogy-text">"Una Autopista Privada"</p>
+                        <p>
+                            Al usar cable, tienes un carril exclusivo para ir y otro para venir. Nadie te estorba.
+                        </p>
                         <ul class="tech-list">
-                            <li><strong>Full-Duplex:</strong> Enviar y recibir a la vez.</li>
-                            <li><strong>Ventaja:</strong> Máxima estabilidad y seguridad.</li>
+                            <li><strong>Full-Duplex:</strong> Puedes hablar y escuchar al mismo tiempo (Como un
+                                teléfono).</li>
+                            <li><strong>Ventaja:</strong> Estabilidad perfecta. Ideal para Gaming y Servidores.</li>
                         </ul>
                     </div>
 
@@ -136,10 +161,16 @@
 
                     <div class="split-side right-side">
                         <h3>📶 WiFi (Pública)</h3>
-                        <p class="analogy-text">"Una Plaza Pública"</p>
+                        <p class="analogy-text">"Una Plaza Pública Ruidosa"</p>
+                        <p>
+                            El aire es un medio compartido. Si existen microondas u otros dispositivos transmitiendo,
+                            ocupan "espacio" en
+                            el aire.
+                        </p>
                         <ul class="tech-list">
-                            <li><strong>Half-Duplex:</strong> Esperar turno para hablar.</li>
-                            <li><strong>Desventaja:</strong> Interferencias y latencia.</li>
+                            <li><strong>Half-Duplex:</strong> Como un Walkie-Talkie. "Hablo, cambio. Escucho, cambio".
+                            </li>
+                            <li><strong>Desventaja:</strong> Latencia impredecible y pérdida de paquetes.</li>
                         </ul>
                     </div>
 
@@ -154,12 +185,14 @@
 
                 <div class="metrics-grid">
                     <div class="metric-card glass-card">
-                        <h4>Ancho de Banda</h4>
-                        <p>Capacidad teórica del camino (Número de carriles de la autopista).</p>
+                        <h4>Ancho de Banda (Capacidad)</h4>
+                        <p>Piénsalo como <strong>cuántos carriles</strong> tiene la autopista. Si es Gigabit, tiene
+                            muchos carriles.</p>
                     </div>
                     <div class="metric-card glass-card">
-                        <h4>Velocidad Real</h4>
-                        <p>El flujo real de datos (autos) en un momento dado.</p>
+                        <h4>Throughput (Velocidad Real)</h4>
+                        <p>Son los <strong>autos reales</strong> que logran pasar. Si hay un accidente (error) o peajes
+                            (protocolos), la velocidad baja.</p>
                     </div>
                 </div>
 
@@ -168,11 +201,13 @@
                     <div class="tech-duo">
                         <div class="tech-unit">
                             <h4>PAM4 (Modulación)</h4>
-                            <p>Enviar mas bits por cada pulso eléctrico. Más densidad.</p>
+                            <p>Truco de ingeniería: en vez de enviar solo 0 y 1, enviamos 4 niveles de voltaje distintos
+                                para mandar el doble de datos.</p>
                         </div>
                         <div class="tech-unit">
                             <h4>WDM (Multiplexación)</h4>
-                            <p>Enviar múltiples colores de luz por una misma fibra. Multiplica la capacidad.</p>
+                            <p>En fibra óptica, enviamos luz roja, azul y verde por el mismo hilo sin que se mezclen.
+                                ¡Multiplica la capacidad x100!</p>
                         </div>
                     </div>
                 </div>
@@ -186,18 +221,22 @@
                 <div class="pathology-grid">
                     <div class="path-item warning">
                         <span class="icon-small">📏</span>
-                        <strong>Distancia (Atenuación):</strong>
-                        <span>Límite de 100m en cobre. Más allá, la señal es un susurro.</span>
+                        <strong>Distancia (Atenuación)</strong>
+                        <span>La señal eléctrica pierde fuerza con cada metro por la resistencia del cobre. A los 100m,
+                            es ilegible.</span>
                     </div>
                     <div class="path-item warning">
                         <span class="icon-small">⚡</span>
-                        <strong>Interferencia (EMI):</strong>
-                        <span>Motores o imanes que "borran" los bits en el cobre.</span>
+                        <strong>Interferencia (EMI)</strong>
+                        <span>Si pasas un cable de red cerca de un motor de ascensor o tubos fluorescentes, el campo
+                            magnético borrará tus datos.</span>
                     </div>
                     <div class="path-item warning">
                         <span class="icon-small">🧱</span>
-                        <strong>Obstáculos WiFi:</strong>
-                        <span>Concreto, espejos y agua absorben las ondas de radio.</span>
+                        <strong>Obstáculos WiFi</strong>
+                        <span>El metal rebota la señal. El agua la absorbe. El concreto la debilita. ¡El cuerpo humano
+                            es 70%
+                            agua, así que también bloquea el WiFi!</span>
                     </div>
                 </div>
             </div>
@@ -215,15 +254,17 @@
                     <div class="terminal-body">
                         <p class="cmd">> Check Status...</p>
                         <p>> ERROR: <span class="error-text">Macro-bending Detected</span></p>
-                        <p class="comment">// CAUSA: Fibra óptica doblada excesivamente. La luz se escapa en la curva.
-                        </p>
+                        <p class="comment">// CAUSA: Alguien dobló el cable de fibra en 90 grados. La luz se escapó en
+                            la curva en lugar de rebotar.</p>
                         <br>
                         <p class="cmd">> Check RJ45...</p>
                         <p>> WARN: <span class="error-text">Intermittent Signal</span></p>
-                        <p class="comment">// CAUSA: Crimpado defectuoso. Los pines no tocan bien el cobre.</p>
+                        <p class="comment">// CAUSA: El conector de plástico está mal ponchado (crimpado). Los pines de
+                            oro no tocan el cobre firmemente.</p>
                         <br>
                         <p>> ERROR: <span class="error-text">Speed Mismatch (Duplex)</span></p>
-                        <p class="comment">// CAUSA: Un lado a 1000Mbps, el otro a 100Mbps.</p>
+                        <p class="comment">// CAUSA: Un lado intenta hablar Full-Duplex y el otro Half-Duplex.
+                            Resultado: colisiones constantes y lentitud.</p>
                     </div>
                 </div>
             </div>
@@ -232,7 +273,7 @@
     </main>
 
     <footer class="glass-footer">
-        <p>Documentación Maestra del Viaje del Bit • Proyecto OSI Capa 1</p>
+        <p>OSI Capa 1</p>
     </footer>
 
     <script src="script.js"></script>

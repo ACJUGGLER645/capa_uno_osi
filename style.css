@@ -105,10 +105,19 @@ h4 {
     transition: var(--transition-smooth);
 }
 
+
+
 .glass-nav.scrolled {
     background: rgba(5, 5, 7, 0.95);
-    /* Even darker on scroll */
+    /* Dark scroll bg */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="light"] .glass-nav.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    /* Light scroll bg FIX */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .nav-container {
@@ -154,15 +163,15 @@ h4 {
 
 /* --- FULL SCREEN SECTIONS --- */
 .full-screen-section {
-    min-height: 85vh;
-    /* Reduced from 100vh */
+    min-height: 70vh;
+    /* Balanced height */
+    padding: 6rem 2rem;
+    /* More breathing room */
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem 2rem;
-    /* Reduced padding */
     border-bottom: 1px solid rgba(255, 255, 255, 0.02);
 }
 
@@ -172,6 +181,13 @@ h4 {
 }
 
 /* --- HERO SECTION --- */
+#origen {
+    padding-top: 10rem;
+    /* Extra top padding for hero to clear nav visual weight */
+    justify-content: flex-start;
+    /* Align closer to top-center rather than absolute middle */
+}
+
 .flex-center {
     text-align: center;
 }
@@ -193,10 +209,14 @@ h4 {
     background: linear-gradient(135deg, #fff 20%, var(--accent-blue) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 [data-theme="light"] .gradient-text {
     background: linear-gradient(135deg, var(--accent-purple) 0%, var(--accent-blue) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .pdu-display {
@@ -238,12 +258,25 @@ h4 {
     }
 }
 
+/* --- SECTION TITLES --- */
+.section-title {
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    /* More space below title */
+    text-align: center;
+    background: linear-gradient(to right, var(--text-main), var(--text-muted));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
 /* --- CARDS & PANELS --- */
 .grid-2-col {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    margin-top: 3rem;
+    gap: 3rem;
+    /* Increased breathing room */
+    margin-top: 2rem;
 }
 
 .glass-card,
@@ -254,6 +287,15 @@ h4 {
     border-radius: 16px;
     padding: 2.5rem;
     transition: var(--transition-smooth);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    /* Default shadow */
+}
+
+[data-theme="light"] .glass-card,
+[data-theme="light"] .glass-panel {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    /* Softer, deeper shadow for light mode */
+    border-color: rgba(0, 0, 0, 0.08);
 }
 
 .glass-card:hover {
@@ -311,8 +353,9 @@ h4 {
 .hardware-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-    margin-top: 2rem;
+    gap: 2.5rem;
+    /* Spaced out */
+    margin-top: 3rem;
 }
 
 .hardware-item {
@@ -390,7 +433,8 @@ h4 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
+    /* Compact margin */
 }
 
 

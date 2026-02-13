@@ -136,8 +136,8 @@
                     </div>
                     <div class="glass-panel hardware-item opacity-dim">
                         <h4>Hubs (Obsoletos)</h4>
-                        <p>Eran repetidores "tontos". Si entraba un dato, lo repetían a TODOS los puertos, causando caos
-                            y choques de información.</p>
+                        <p>Son los "abuelos" de los switches. Un Hub no es inteligente: cuando recibe un bit por un puerto, simplemente lo replica y lo envía por todos los demás puertos. 
+                            No sabe qué computadora está conectada en cada lugar.</p>
                     </div>
                 </div>
             </div>
@@ -202,15 +202,15 @@
                 </div>
 
                 <div class="advanced-tech-box glass-panel mt-2">
-                    <h3>Tecnologías Pro (Para Expertos)</h3>
+                    <h3>Tecnologías Pro </h3>
                     <div class="tech-duo">
                         <div class="tech-unit">
-                            <h4>PAM4 (Modulación)</h4>
+                            <h4>PAM4 (4-level Pulse Amplitude Modulation)</h4>
                             <p>Truco de ingeniería: en vez de enviar solo 0 y 1, enviamos 4 niveles de voltaje distintos
                                 para mandar el doble de datos.</p>
                         </div>
                         <div class="tech-unit">
-                            <h4>WDM (Multiplexación)</h4>
+                            <h4>WDM (Wavelength Division Multiplexing)</h4>
                             <p>En fibra óptica, enviamos luz roja, azul y verde por el mismo hilo sin que se mezclen.
                                 ¡Multiplica la capacidad x100!</p>
                         </div>
@@ -224,25 +224,31 @@
             <div class="container">
                 <h2 class="section-title">Etapa 6: Los Obstáculos Físicos</h2>
                 <div class="pathology-grid">
-                    <div class="path-item warning">
-                        <span class="icon-small">📏</span>
-                        <strong>Distancia (Atenuación)</strong>
-                        <span>La señal eléctrica pierde fuerza con cada metro por la resistencia del cobre. A los 100m,
-                            es ilegible.</span>
-                    </div>
-                    <div class="path-item warning">
-                        <span class="icon-small">⚡</span>
-                        <strong>Interferencia (EMI)</strong>
-                        <span>Si pasas un cable de red cerca de un motor de ascensor o tubos fluorescentes, el campo
-                            magnético borrará tus datos.</span>
-                    </div>
-                    <div class="path-item warning">
+                <div class="path-item warning">
                         <span class="icon-small">🧱</span>
                         <strong>Obstáculos WiFi</strong>
                         <span>El metal rebota la señal. El agua la absorbe. El concreto la debilita. ¡El cuerpo humano
                             es 70%
                             agua, así que también bloquea el WiFi!</span>
                     </div>
+                    <div class="path-item warning">
+                        <span class="icon-small">📏</span>
+                        <strong>Distancia (Atenuación)</strong>
+                        <span>La señal eléctrica pierde fuerza con cada metro por la resistencia del cobre. A los 100m,
+                            es ilegible.
+                            <br>
+                            La distancia máxima típica para una instalación de fibra óptica 
+                            (drop cable) desde la caja NAP hasta la casa en redes FTTH es de 750 metros</span>
+                    </div>
+                    <div class="path-item warning">
+                        <span class="icon-small">⚡</span>
+                        <strong>Interferencia (EMI)</strong>
+                        <span>Motores de ascensor y luces fluorescentes crean campos magnéticos que
+                            afectan la integridad de los datos en cables de cobre,
+                             volviendo la conexión "ruidosa" y lenta. <br>   La señal de un cable coaxial puede ser interrumpida o degradada por interferencias electromagnéticas (microondas, routers, teléfonos), conectores sueltos o mal instalados (cortocircuitos entre malla y vivo), daño físico en el cable (dobleces, humedad), 
+                             o instalaciones de baja calidad <br> La fibra óptica es inmune a las interferencias electromagnéticas, pero su rendimiento físico se ve afectado principalmente por daños en el cable (dobleces pronunciados, cortes), condiciones ambientales extremas, y una mala instalación.</span>
+                    </div>
+                    
                 </div>
             </div>
         </section>

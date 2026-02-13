@@ -548,6 +548,12 @@ h4 {
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
 }
 
+[data-theme="light"] .terminal-container {
+    background: #f5f5f5;
+    border: 1px solid #d0d0d0;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
 .terminal-header {
     background: #1a1b23;
     padding: 0.6rem 1rem;
@@ -555,6 +561,11 @@ h4 {
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #333;
+}
+
+[data-theme="light"] .terminal-header {
+    background: #e0e0e0;
+    border-bottom: 1px solid #c0c0c0;
 }
 
 .window-controls {
@@ -585,15 +596,27 @@ h4 {
     font-size: 0.8rem;
 }
 
+[data-theme="light"] .term-title {
+    color: #555;
+}
+
 .terminal-body {
     padding: 1.5rem;
     color: #ccc;
     font-size: 0.9rem;
 }
 
+[data-theme="light"] .terminal-body {
+    color: #333;
+}
+
 .cmd {
     color: #fff;
     margin-bottom: 0.5rem;
+}
+
+[data-theme="light"] .cmd {
+    color: #000;
 }
 
 .error-text {
@@ -615,6 +638,13 @@ h4 {
     color: var(--text-muted);
     font-size: 0.8rem;
     border-top: 1px solid var(--glass-border);
+}
+
+.glass-footer .authors {
+    margin-top: 1rem;
+    font-size: 0.75rem;
+    opacity: 0.8;
+    line-height: 1.6;
 }
 
 .github-link {

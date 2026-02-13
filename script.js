@@ -62,6 +62,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
+    // Observe all sections
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+
     // 4. Mobile Menu Logic
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinksContainer = document.querySelector('.nav-links');
